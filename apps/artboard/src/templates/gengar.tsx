@@ -522,47 +522,36 @@ const Custom = ({ id }: { id: string }) => {
 
 const mapSectionToComponent = (section: SectionKey) => {
   switch (section) {
-    case "profiles": {
+    case "profiles":
       return <Profiles />;
-    }
-    case "experience": {
+    case "experience":
       return <Experience />;
-    }
-    case "education": {
+    case "education":
       return <Education />;
-    }
-    case "awards": {
+    case "awards":
       return <Awards />;
-    }
-    case "certifications": {
+    case "certifications":
       return <Certifications />;
-    }
-    case "skills": {
+    case "skills":
+    case "skills:leadership": // ✅ Render with same component
       return <Skills />;
-    }
-    case "interests": {
+    case "interests":
       return <Interests />;
-    }
-    case "publications": {
+    case "publications":
       return <Publications />;
-    }
-    case "volunteer": {
+    case "volunteer":
       return <Volunteer />;
-    }
-    case "languages": {
+    case "languages":
       return <Languages />;
-    }
-    case "projects": {
+    case "projects":
       return <Projects />;
-    }
-    case "references": {
+    case "references":
       return <References />;
-    }
-    default: {
-      if (section.startsWith("custom.")) return <Custom id={section.split(".")[1]} />;
-
+    default:
+      if (section.startsWith("custom.")) {
+        return <Custom id={section.split(".")[1]} />;
+      }
       return null;
-    }
   }
 };
 
