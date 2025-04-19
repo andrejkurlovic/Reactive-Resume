@@ -288,6 +288,31 @@ export const sampleResume: ResumeData = {
         },
       ],
     },
+    "skills:leadership": {
+  name: "Leadership Skills",
+  columns: 1,
+  separateLinks: true,
+  visible: true,
+  id: "skills:leadership",
+  items: [
+    {
+      id: "s1",
+      visible: true,
+      name: "Strategic Leadership",
+      level: 5,
+      description: "",
+      keywords: [],
+    },
+    {
+      id: "s2",
+      visible: true,
+      name: "Cross-functional Collaboration",
+      level: 5,
+      description: "",
+      keywords: [],
+    },
+  ],
+},
     custom: {},
   },
   metadata: {
